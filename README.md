@@ -3,11 +3,15 @@
 Rocketseat bootcamp goStack10.0 challange number 01. It's about an API to store projects and their respective tasks.
 <br><br>
 This application has HTTP Methods: POST, GET, PUT E DELETE to respectively creating projects and their tasks too, listing all projects, update a project through your ID and deleting a project through your ID too.
+<br>
+In addition to the methods there are two middlewares that allows: 1st- checking if the project exists - used when requesting the registration of a task in a certain project or updating a project or trying to delete a project; 2nd- counting the number of requests made to the server (used in all requests).
 <br><br>
 <span>&#x1f1e7;&#x1f1f7;</span>  <br>
 Desafio 01 do bootcamp goStack da Rocketseat. Trata-se de uma API para armazenar projetos e suas tarefas.
 <br><br>
 A aplicação contém métodos HTTP: POST, GET, PUT E DELETE para, respectivamente, cadastrar projetos e também suas tarefas, listar projetos, alterar um projeto através de seu ID, e deletar determinado projeto também atrávés de seu ID.
+<br>
+Além dos métodos, há dois middlewares que permitem: 1- verificar se o projeto existe (utilizado ao requisitar o cadastro uma tarefa em determinado projeto, ao atualizar um projeto ou ao tentar deletar algum projeto); 2- contar o número de requisições feitas ao servidor (usado em todas requisições).
 
 ##  :bulb:   Main learning / Principais aprendizados
 
