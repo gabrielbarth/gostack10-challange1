@@ -1,6 +1,5 @@
 const express = require('express')
 
-
 const server = express()
 
 server.use(express.json())
@@ -29,7 +28,7 @@ function logRequests(req, res, next) {
 
 server.use(logRequests);
 
-//criando uma rota com o método http POST - projetos
+// creating a route with POST http method
 server.post('/projects', logRequests, (req, res) => {
   const { id, title } = req.body
 
@@ -44,7 +43,7 @@ server.post('/projects', logRequests, (req, res) => {
   return res.json(projects)
 })
 
-//criando uma rota com o método http POST - tarefas
+// creating a route with POST http method that specifies a project
 server.post('/projects/:id/tasks', checkProjectExists, logRequests, (req, res) => {
   const { id } = req.params
   const { title } = req.body
@@ -55,12 +54,13 @@ server.post('/projects/:id/tasks', checkProjectExists, logRequests, (req, res) =
   return res.json(project)
 })
 
-//criando uma rota com o método http GET
+
+// creating a route with GET http method
 server.get('/projects', (req, res) => {
   return res.json(projects)
 })
 
-//criando uma rota com o método http PUT
+// creating a route with PUT http method
 server.put('/projects/:id', checkProjectExists, logRequests, (req, res) => {
   const { id } = req.params
   const { title } = req.body
@@ -72,7 +72,7 @@ server.put('/projects/:id', checkProjectExists, logRequests, (req, res) => {
 })
 
 
-//criando uma rota com o método http DELETE
+// creating a route with DELETE http method
 server.delete('/projects/:id', checkProjectExists, logRequests, (req, res) => {
   const { id } = req.params
 
